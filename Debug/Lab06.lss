@@ -1,0 +1,620 @@
+
+Lab06.elf:     file format elf32-avr
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .data         00000000  00800100  00800100  00000402  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  1 .text         0000038e  00000000  00000000  00000074  2**1
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .bss          00000003  00800100  00800100  00000402  2**0
+                  ALLOC
+  3 .comment      00000030  00000000  00000000  00000402  2**0
+                  CONTENTS, READONLY
+  4 .note.gnu.avr.deviceinfo 00000040  00000000  00000000  00000434  2**2
+                  CONTENTS, READONLY
+  5 .debug_aranges 00000030  00000000  00000000  00000474  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  6 .debug_info   000008bf  00000000  00000000  000004a4  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  7 .debug_abbrev 000007bc  00000000  00000000  00000d63  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  8 .debug_line   00000392  00000000  00000000  0000151f  2**0
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_frame  000000a0  00000000  00000000  000018b4  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_str    00000459  00000000  00000000  00001954  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_loc    00000133  00000000  00000000  00001dad  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_ranges 00000020  00000000  00000000  00001ee0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+   0:	45 c0       	rjmp	.+138    	; 0x8c <__ctors_end>
+   2:	00 00       	nop
+   4:	9f c1       	rjmp	.+830    	; 0x344 <__vector_1>
+   6:	00 00       	nop
+   8:	5e c0       	rjmp	.+188    	; 0xc6 <__bad_interrupt>
+   a:	00 00       	nop
+   c:	5c c0       	rjmp	.+184    	; 0xc6 <__bad_interrupt>
+   e:	00 00       	nop
+  10:	5a c0       	rjmp	.+180    	; 0xc6 <__bad_interrupt>
+  12:	00 00       	nop
+  14:	58 c0       	rjmp	.+176    	; 0xc6 <__bad_interrupt>
+  16:	00 00       	nop
+  18:	56 c0       	rjmp	.+172    	; 0xc6 <__bad_interrupt>
+  1a:	00 00       	nop
+  1c:	54 c0       	rjmp	.+168    	; 0xc6 <__bad_interrupt>
+  1e:	00 00       	nop
+  20:	52 c0       	rjmp	.+164    	; 0xc6 <__bad_interrupt>
+  22:	00 00       	nop
+  24:	50 c0       	rjmp	.+160    	; 0xc6 <__bad_interrupt>
+  26:	00 00       	nop
+  28:	4e c0       	rjmp	.+156    	; 0xc6 <__bad_interrupt>
+  2a:	00 00       	nop
+  2c:	4c c0       	rjmp	.+152    	; 0xc6 <__bad_interrupt>
+  2e:	00 00       	nop
+  30:	4a c0       	rjmp	.+148    	; 0xc6 <__bad_interrupt>
+  32:	00 00       	nop
+  34:	48 c0       	rjmp	.+144    	; 0xc6 <__bad_interrupt>
+  36:	00 00       	nop
+  38:	46 c0       	rjmp	.+140    	; 0xc6 <__bad_interrupt>
+  3a:	00 00       	nop
+  3c:	44 c0       	rjmp	.+136    	; 0xc6 <__bad_interrupt>
+  3e:	00 00       	nop
+  40:	54 c1       	rjmp	.+680    	; 0x2ea <__vector_16>
+  42:	00 00       	nop
+  44:	40 c0       	rjmp	.+128    	; 0xc6 <__bad_interrupt>
+  46:	00 00       	nop
+  48:	3e c0       	rjmp	.+124    	; 0xc6 <__bad_interrupt>
+  4a:	00 00       	nop
+  4c:	3c c0       	rjmp	.+120    	; 0xc6 <__bad_interrupt>
+  4e:	00 00       	nop
+  50:	3a c0       	rjmp	.+116    	; 0xc6 <__bad_interrupt>
+  52:	00 00       	nop
+  54:	38 c0       	rjmp	.+112    	; 0xc6 <__bad_interrupt>
+  56:	00 00       	nop
+  58:	36 c0       	rjmp	.+108    	; 0xc6 <__bad_interrupt>
+  5a:	00 00       	nop
+  5c:	34 c0       	rjmp	.+104    	; 0xc6 <__bad_interrupt>
+  5e:	00 00       	nop
+  60:	32 c0       	rjmp	.+100    	; 0xc6 <__bad_interrupt>
+  62:	00 00       	nop
+  64:	30 c0       	rjmp	.+96     	; 0xc6 <__bad_interrupt>
+  66:	00 00       	nop
+  68:	2e c0       	rjmp	.+92     	; 0xc6 <__bad_interrupt>
+  6a:	00 00       	nop
+  6c:	2c c0       	rjmp	.+88     	; 0xc6 <__bad_interrupt>
+  6e:	00 00       	nop
+  70:	2a c0       	rjmp	.+84     	; 0xc6 <__bad_interrupt>
+  72:	00 00       	nop
+  74:	28 c0       	rjmp	.+80     	; 0xc6 <__bad_interrupt>
+  76:	00 00       	nop
+  78:	26 c0       	rjmp	.+76     	; 0xc6 <__bad_interrupt>
+  7a:	00 00       	nop
+  7c:	24 c0       	rjmp	.+72     	; 0xc6 <__bad_interrupt>
+  7e:	00 00       	nop
+  80:	22 c0       	rjmp	.+68     	; 0xc6 <__bad_interrupt>
+  82:	00 00       	nop
+  84:	20 c0       	rjmp	.+64     	; 0xc6 <__bad_interrupt>
+  86:	00 00       	nop
+  88:	1e c0       	rjmp	.+60     	; 0xc6 <__bad_interrupt>
+	...
+
+0000008c <__ctors_end>:
+  8c:	11 24       	eor	r1, r1
+  8e:	1f be       	out	0x3f, r1	; 63
+  90:	cf ef       	ldi	r28, 0xFF	; 255
+  92:	d0 e1       	ldi	r29, 0x10	; 16
+  94:	de bf       	out	0x3e, r29	; 62
+  96:	cd bf       	out	0x3d, r28	; 61
+
+00000098 <__do_copy_data>:
+  98:	11 e0       	ldi	r17, 0x01	; 1
+  9a:	a0 e0       	ldi	r26, 0x00	; 0
+  9c:	b1 e0       	ldi	r27, 0x01	; 1
+  9e:	ee e8       	ldi	r30, 0x8E	; 142
+  a0:	f3 e0       	ldi	r31, 0x03	; 3
+  a2:	00 e0       	ldi	r16, 0x00	; 0
+  a4:	0b bf       	out	0x3b, r16	; 59
+  a6:	02 c0       	rjmp	.+4      	; 0xac <__do_copy_data+0x14>
+  a8:	07 90       	elpm	r0, Z+
+  aa:	0d 92       	st	X+, r0
+  ac:	a0 30       	cpi	r26, 0x00	; 0
+  ae:	b1 07       	cpc	r27, r17
+  b0:	d9 f7       	brne	.-10     	; 0xa8 <__do_copy_data+0x10>
+
+000000b2 <__do_clear_bss>:
+  b2:	21 e0       	ldi	r18, 0x01	; 1
+  b4:	a0 e0       	ldi	r26, 0x00	; 0
+  b6:	b1 e0       	ldi	r27, 0x01	; 1
+  b8:	01 c0       	rjmp	.+2      	; 0xbc <.do_clear_bss_start>
+
+000000ba <.do_clear_bss_loop>:
+  ba:	1d 92       	st	X+, r1
+
+000000bc <.do_clear_bss_start>:
+  bc:	a3 30       	cpi	r26, 0x03	; 3
+  be:	b2 07       	cpc	r27, r18
+  c0:	e1 f7       	brne	.-8      	; 0xba <.do_clear_bss_loop>
+  c2:	02 d0       	rcall	.+4      	; 0xc8 <main>
+  c4:	62 c1       	rjmp	.+708    	; 0x38a <_exit>
+
+000000c6 <__bad_interrupt>:
+  c6:	9c cf       	rjmp	.-200    	; 0x0 <__vectors>
+
+000000c8 <main>:
+
+volatile enum patterns Mode = BottomToTop;   // which pattern we are on, set by INT0 ISR
+volatile unsigned char Tick = 0;             // incremented by TIMER0 ISR every 1ms
+volatile unsigned char step = 0;             // position in the current pattern
+
+int main(void){
+  c8:	cf 93       	push	r28
+  ca:	df 93       	push	r29
+  cc:	cd b7       	in	r28, 0x3d	; 61
+  ce:	de b7       	in	r29, 0x3e	; 62
+
+	// Initialization for LEDs
+	// Set direction for A ports.
+	// (Prof Note:  This is similar to our two line assembly commands.)
+
+	DDRA = 0xFF;  // Set the Direction for all PORTA pints to be outputs
+  d0:	8a e3       	ldi	r24, 0x3A	; 58
+  d2:	90 e0       	ldi	r25, 0x00	; 0
+  d4:	2f ef       	ldi	r18, 0xFF	; 255
+  d6:	fc 01       	movw	r30, r24
+  d8:	20 83       	st	Z, r18
+	LEDS = 0xFF;  // Set the PORTA for all pins to be high (i.e. OFF)
+  da:	8b e3       	ldi	r24, 0x3B	; 59
+  dc:	90 e0       	ldi	r25, 0x00	; 0
+  de:	2f ef       	ldi	r18, 0xFF	; 255
+  e0:	fc 01       	movw	r30, r24
+  e2:	20 83       	st	Z, r18
+	//  before you enable them...  You also have to have the proper ISR routine
+	//  ready for this to work.)
+	// (Prof Note Two:  You will need to show your own calculations in the
+	//  Lab Report to verify the TCNT0_COUNT_SET value!)
+
+	TCCR0 = (1<<CS02);
+  e4:	83 e5       	ldi	r24, 0x53	; 83
+  e6:	90 e0       	ldi	r25, 0x00	; 0
+  e8:	24 e0       	ldi	r18, 0x04	; 4
+  ea:	fc 01       	movw	r30, r24
+  ec:	20 83       	st	Z, r18
+	TCNT0 = TCNT0_COUNT_SET;
+  ee:	82 e5       	ldi	r24, 0x52	; 82
+  f0:	90 e0       	ldi	r25, 0x00	; 0
+  f2:	2e e8       	ldi	r18, 0x8E	; 142
+  f4:	fc 01       	movw	r30, r24
+  f6:	20 83       	st	Z, r18
+	TIMSK = (1<<TOIE0);
+  f8:	87 e5       	ldi	r24, 0x57	; 87
+  fa:	90 e0       	ldi	r25, 0x00	; 0
+  fc:	21 e0       	ldi	r18, 0x01	; 1
+  fe:	fc 01       	movw	r30, r24
+ 100:	20 83       	st	Z, r18
+	// Using the LED PORTA initilization above and your Lab05 code,
+	// Configure the joystick button.
+	// (Prof Note: you will need to add another jumper wire, or
+	// change the ones you have, to get the center button working!
+
+	DDRB  &= ~(1 << PB0);   // PB0 = joystick center button (input)
+ 102:	87 e3       	ldi	r24, 0x37	; 55
+ 104:	90 e0       	ldi	r25, 0x00	; 0
+ 106:	27 e3       	ldi	r18, 0x37	; 55
+ 108:	30 e0       	ldi	r19, 0x00	; 0
+ 10a:	f9 01       	movw	r30, r18
+ 10c:	20 81       	ld	r18, Z
+ 10e:	2e 7f       	andi	r18, 0xFE	; 254
+ 110:	fc 01       	movw	r30, r24
+ 112:	20 83       	st	Z, r18
+	PORTB |=  (1 << PB0);   // pull-up on
+ 114:	88 e3       	ldi	r24, 0x38	; 56
+ 116:	90 e0       	ldi	r25, 0x00	; 0
+ 118:	28 e3       	ldi	r18, 0x38	; 56
+ 11a:	30 e0       	ldi	r19, 0x00	; 0
+ 11c:	f9 01       	movw	r30, r18
+ 11e:	20 81       	ld	r18, Z
+ 120:	21 60       	ori	r18, 0x01	; 1
+ 122:	fc 01       	movw	r30, r24
+ 124:	20 83       	st	Z, r18
+	DDRD  &= ~(1 << PD0);   // PD0 = INT0 (input), jumpered to PB0
+ 126:	81 e3       	ldi	r24, 0x31	; 49
+ 128:	90 e0       	ldi	r25, 0x00	; 0
+ 12a:	21 e3       	ldi	r18, 0x31	; 49
+ 12c:	30 e0       	ldi	r19, 0x00	; 0
+ 12e:	f9 01       	movw	r30, r18
+ 130:	20 81       	ld	r18, Z
+ 132:	2e 7f       	andi	r18, 0xFE	; 254
+ 134:	fc 01       	movw	r30, r24
+ 136:	20 83       	st	Z, r18
+
+	// Interrupt Enable Block
+	// Using your Lab05 code, you will need to update these
+	// lines from 0x00 to have the appropriate mask.
+	EICRA = 0x03;  // INT0 on rising edge (button released)
+ 138:	8a e6       	ldi	r24, 0x6A	; 106
+ 13a:	90 e0       	ldi	r25, 0x00	; 0
+ 13c:	23 e0       	ldi	r18, 0x03	; 3
+ 13e:	fc 01       	movw	r30, r24
+ 140:	20 83       	st	Z, r18
+	EIMSK = 0x01;  // enable INT0
+ 142:	89 e5       	ldi	r24, 0x59	; 89
+ 144:	90 e0       	ldi	r25, 0x00	; 0
+ 146:	21 e0       	ldi	r18, 0x01	; 1
+ 148:	fc 01       	movw	r30, r24
+ 14a:	20 83       	st	Z, r18
+	// Enable Global Interrupts
+	sei();
+ 14c:	78 94       	sei
+
+	// Main Loop
+	while (1) {
+		while(Tick < 50);   // wait here until 50ms passed
+ 14e:	00 00       	nop
+ 150:	80 91 01 01 	lds	r24, 0x0101	; 0x800101 <Tick>
+ 154:	82 33       	cpi	r24, 0x32	; 50
+ 156:	e0 f3       	brcs	.-8      	; 0x150 <main+0x88>
+		Tick = 0;           // start counting again
+ 158:	10 92 01 01 	sts	0x0101, r1	; 0x800101 <Tick>
+		switch(Mode)
+ 15c:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
+ 160:	88 2f       	mov	r24, r24
+ 162:	90 e0       	ldi	r25, 0x00	; 0
+ 164:	82 30       	cpi	r24, 0x02	; 2
+ 166:	91 05       	cpc	r25, r1
+ 168:	09 f4       	brne	.+2      	; 0x16c <main+0xa4>
+ 16a:	4e c0       	rjmp	.+156    	; 0x208 <main+0x140>
+ 16c:	83 30       	cpi	r24, 0x03	; 3
+ 16e:	91 05       	cpc	r25, r1
+ 170:	2c f4       	brge	.+10     	; 0x17c <main+0xb4>
+ 172:	00 97       	sbiw	r24, 0x00	; 0
+ 174:	79 f0       	breq	.+30     	; 0x194 <main+0xcc>
+ 176:	01 97       	sbiw	r24, 0x01	; 1
+ 178:	51 f1       	breq	.+84     	; 0x1ce <main+0x106>
+ 17a:	b6 c0       	rjmp	.+364    	; 0x2e8 <main+0x220>
+ 17c:	84 30       	cpi	r24, 0x04	; 4
+ 17e:	91 05       	cpc	r25, r1
+ 180:	09 f4       	brne	.+2      	; 0x184 <main+0xbc>
+ 182:	92 c0       	rjmp	.+292    	; 0x2a8 <main+0x1e0>
+ 184:	84 30       	cpi	r24, 0x04	; 4
+ 186:	91 05       	cpc	r25, r1
+ 188:	0c f4       	brge	.+2      	; 0x18c <main+0xc4>
+ 18a:	73 c0       	rjmp	.+230    	; 0x272 <main+0x1aa>
+ 18c:	05 97       	sbiw	r24, 0x05	; 5
+ 18e:	09 f4       	brne	.+2      	; 0x192 <main+0xca>
+ 190:	98 c0       	rjmp	.+304    	; 0x2c2 <main+0x1fa>
+ 192:	aa c0       	rjmp	.+340    	; 0x2e8 <main+0x220>
+		{
+			case BottomToTop:
+				LEDS = ~(1 << step);   // turn on one LED (~ because active low)
+ 194:	8b e3       	ldi	r24, 0x3B	; 59
+ 196:	90 e0       	ldi	r25, 0x00	; 0
+ 198:	20 91 02 01 	lds	r18, 0x0102	; 0x800102 <step>
+ 19c:	42 2f       	mov	r20, r18
+ 19e:	50 e0       	ldi	r21, 0x00	; 0
+ 1a0:	21 e0       	ldi	r18, 0x01	; 1
+ 1a2:	30 e0       	ldi	r19, 0x00	; 0
+ 1a4:	02 c0       	rjmp	.+4      	; 0x1aa <main+0xe2>
+ 1a6:	22 0f       	add	r18, r18
+ 1a8:	33 1f       	adc	r19, r19
+ 1aa:	4a 95       	dec	r20
+ 1ac:	e2 f7       	brpl	.-8      	; 0x1a6 <main+0xde>
+ 1ae:	20 95       	com	r18
+ 1b0:	fc 01       	movw	r30, r24
+ 1b2:	20 83       	st	Z, r18
+				step++;
+ 1b4:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <step>
+ 1b8:	8f 5f       	subi	r24, 0xFF	; 255
+ 1ba:	80 93 02 01 	sts	0x0102, r24	; 0x800102 <step>
+				if (step > 7){
+ 1be:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <step>
+ 1c2:	88 30       	cpi	r24, 0x08	; 8
+ 1c4:	08 f4       	brcc	.+2      	; 0x1c8 <main+0x100>
+ 1c6:	89 c0       	rjmp	.+274    	; 0x2da <main+0x212>
+					step = 0;   // back to the start
+ 1c8:	10 92 02 01 	sts	0x0102, r1	; 0x800102 <step>
+				}
+				break;
+ 1cc:	86 c0       	rjmp	.+268    	; 0x2da <main+0x212>
+
+			case TopToBottom:
+				LEDS = ~(0x80 >> step);   // start at A7 and shift down
+ 1ce:	8b e3       	ldi	r24, 0x3B	; 59
+ 1d0:	90 e0       	ldi	r25, 0x00	; 0
+ 1d2:	20 91 02 01 	lds	r18, 0x0102	; 0x800102 <step>
+ 1d6:	42 2f       	mov	r20, r18
+ 1d8:	50 e0       	ldi	r21, 0x00	; 0
+ 1da:	20 e8       	ldi	r18, 0x80	; 128
+ 1dc:	30 e0       	ldi	r19, 0x00	; 0
+ 1de:	02 c0       	rjmp	.+4      	; 0x1e4 <main+0x11c>
+ 1e0:	35 95       	asr	r19
+ 1e2:	27 95       	ror	r18
+ 1e4:	4a 95       	dec	r20
+ 1e6:	e2 f7       	brpl	.-8      	; 0x1e0 <main+0x118>
+ 1e8:	20 95       	com	r18
+ 1ea:	fc 01       	movw	r30, r24
+ 1ec:	20 83       	st	Z, r18
+				step++;
+ 1ee:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <step>
+ 1f2:	8f 5f       	subi	r24, 0xFF	; 255
+ 1f4:	80 93 02 01 	sts	0x0102, r24	; 0x800102 <step>
+				if (step > 7){
+ 1f8:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <step>
+ 1fc:	88 30       	cpi	r24, 0x08	; 8
+ 1fe:	08 f4       	brcc	.+2      	; 0x202 <main+0x13a>
+ 200:	6e c0       	rjmp	.+220    	; 0x2de <main+0x216>
+					step = 0;
+ 202:	10 92 02 01 	sts	0x0102, r1	; 0x800102 <step>
+				}
+				break;
+ 206:	6b c0       	rjmp	.+214    	; 0x2de <main+0x216>
+
+			case BackAndForth:
+				// first 8 steps go up, the next 6 come back down
+				if (step < 8){
+ 208:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <step>
+ 20c:	88 30       	cpi	r24, 0x08	; 8
+ 20e:	88 f4       	brcc	.+34     	; 0x232 <main+0x16a>
+					LEDS = ~(1 << step);          // A0 to A7
+ 210:	8b e3       	ldi	r24, 0x3B	; 59
+ 212:	90 e0       	ldi	r25, 0x00	; 0
+ 214:	20 91 02 01 	lds	r18, 0x0102	; 0x800102 <step>
+ 218:	42 2f       	mov	r20, r18
+ 21a:	50 e0       	ldi	r21, 0x00	; 0
+ 21c:	21 e0       	ldi	r18, 0x01	; 1
+ 21e:	30 e0       	ldi	r19, 0x00	; 0
+ 220:	02 c0       	rjmp	.+4      	; 0x226 <main+0x15e>
+ 222:	22 0f       	add	r18, r18
+ 224:	33 1f       	adc	r19, r19
+ 226:	4a 95       	dec	r20
+ 228:	e2 f7       	brpl	.-8      	; 0x222 <main+0x15a>
+ 22a:	20 95       	com	r18
+ 22c:	fc 01       	movw	r30, r24
+ 22e:	20 83       	st	Z, r18
+ 230:	14 c0       	rjmp	.+40     	; 0x25a <main+0x192>
+				}
+				else{
+					LEDS = ~(1 << (14 - step));   // A6 to A1
+ 232:	8b e3       	ldi	r24, 0x3B	; 59
+ 234:	90 e0       	ldi	r25, 0x00	; 0
+ 236:	20 91 02 01 	lds	r18, 0x0102	; 0x800102 <step>
+ 23a:	22 2f       	mov	r18, r18
+ 23c:	30 e0       	ldi	r19, 0x00	; 0
+ 23e:	4e e0       	ldi	r20, 0x0E	; 14
+ 240:	50 e0       	ldi	r21, 0x00	; 0
+ 242:	42 1b       	sub	r20, r18
+ 244:	53 0b       	sbc	r21, r19
+ 246:	21 e0       	ldi	r18, 0x01	; 1
+ 248:	30 e0       	ldi	r19, 0x00	; 0
+ 24a:	02 c0       	rjmp	.+4      	; 0x250 <main+0x188>
+ 24c:	22 0f       	add	r18, r18
+ 24e:	33 1f       	adc	r19, r19
+ 250:	4a 95       	dec	r20
+ 252:	e2 f7       	brpl	.-8      	; 0x24c <main+0x184>
+ 254:	20 95       	com	r18
+ 256:	fc 01       	movw	r30, r24
+ 258:	20 83       	st	Z, r18
+				}
+				step++;
+ 25a:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <step>
+ 25e:	8f 5f       	subi	r24, 0xFF	; 255
+ 260:	80 93 02 01 	sts	0x0102, r24	; 0x800102 <step>
+				if (step > 13){
+ 264:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <step>
+ 268:	8e 30       	cpi	r24, 0x0E	; 14
+ 26a:	d8 f1       	brcs	.+118    	; 0x2e2 <main+0x21a>
+					step = 0;
+ 26c:	10 92 02 01 	sts	0x0102, r1	; 0x800102 <step>
+				}
+				break;
+ 270:	38 c0       	rjmp	.+112    	; 0x2e2 <main+0x21a>
+
+			case MysteryPattern:
+				// swaps between the bottom half and top half
+				if (step == 0){
+ 272:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <step>
+ 276:	88 23       	and	r24, r24
+ 278:	31 f4       	brne	.+12     	; 0x286 <main+0x1be>
+					LEDS = 0xF0;   // A0-A3 on (active low)
+ 27a:	8b e3       	ldi	r24, 0x3B	; 59
+ 27c:	90 e0       	ldi	r25, 0x00	; 0
+ 27e:	20 ef       	ldi	r18, 0xF0	; 240
+ 280:	fc 01       	movw	r30, r24
+ 282:	20 83       	st	Z, r18
+ 284:	05 c0       	rjmp	.+10     	; 0x290 <main+0x1c8>
+				}
+				else{
+					LEDS = 0x0F;   // A4-A7 on (active low)
+ 286:	8b e3       	ldi	r24, 0x3B	; 59
+ 288:	90 e0       	ldi	r25, 0x00	; 0
+ 28a:	2f e0       	ldi	r18, 0x0F	; 15
+ 28c:	fc 01       	movw	r30, r24
+ 28e:	20 83       	st	Z, r18
+				}
+				step++;
+ 290:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <step>
+ 294:	8f 5f       	subi	r24, 0xFF	; 255
+ 296:	80 93 02 01 	sts	0x0102, r24	; 0x800102 <step>
+				if (step > 1){
+ 29a:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <step>
+ 29e:	82 30       	cpi	r24, 0x02	; 2
+ 2a0:	10 f1       	brcs	.+68     	; 0x2e6 <main+0x21e>
+					step = 0;
+ 2a2:	10 92 02 01 	sts	0x0102, r1	; 0x800102 <step>
+				}
+				break;
+ 2a6:	1f c0       	rjmp	.+62     	; 0x2e6 <main+0x21e>
+			case BinaryCount:
+				LEDS = ~(0x00 + step);   // step is the number being shown
+ 2a8:	8b e3       	ldi	r24, 0x3B	; 59
+ 2aa:	90 e0       	ldi	r25, 0x00	; 0
+ 2ac:	20 91 02 01 	lds	r18, 0x0102	; 0x800102 <step>
+ 2b0:	20 95       	com	r18
+ 2b2:	fc 01       	movw	r30, r24
+ 2b4:	20 83       	st	Z, r18
+				step++;
+ 2b6:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <step>
+ 2ba:	8f 5f       	subi	r24, 0xFF	; 255
+ 2bc:	80 93 02 01 	sts	0x0102, r24	; 0x800102 <step>
+				break;
+ 2c0:	13 c0       	rjmp	.+38     	; 0x2e8 <main+0x220>
+
+			case BinaryCountdown:
+				LEDS = ~(0xFF - step);   // 255 down to 0 on A7-A0 (active low)
+ 2c2:	8b e3       	ldi	r24, 0x3B	; 59
+ 2c4:	90 e0       	ldi	r25, 0x00	; 0
+ 2c6:	20 91 02 01 	lds	r18, 0x0102	; 0x800102 <step>
+ 2ca:	fc 01       	movw	r30, r24
+ 2cc:	20 83       	st	Z, r18
+				step++;                  // 8-bit step wraps 255 -> 0, so the count repeats
+ 2ce:	80 91 02 01 	lds	r24, 0x0102	; 0x800102 <step>
+ 2d2:	8f 5f       	subi	r24, 0xFF	; 255
+ 2d4:	80 93 02 01 	sts	0x0102, r24	; 0x800102 <step>
+				break;
+ 2d8:	07 c0       	rjmp	.+14     	; 0x2e8 <main+0x220>
+				LEDS = ~(1 << step);   // turn on one LED (~ because active low)
+				step++;
+				if (step > 7){
+					step = 0;   // back to the start
+				}
+				break;
+ 2da:	00 00       	nop
+ 2dc:	38 cf       	rjmp	.-400    	; 0x14e <main+0x86>
+				LEDS = ~(0x80 >> step);   // start at A7 and shift down
+				step++;
+				if (step > 7){
+					step = 0;
+				}
+				break;
+ 2de:	00 00       	nop
+ 2e0:	36 cf       	rjmp	.-404    	; 0x14e <main+0x86>
+				}
+				step++;
+				if (step > 13){
+					step = 0;
+				}
+				break;
+ 2e2:	00 00       	nop
+ 2e4:	34 cf       	rjmp	.-408    	; 0x14e <main+0x86>
+				}
+				step++;
+				if (step > 1){
+					step = 0;
+				}
+				break;
+ 2e6:	00 00       	nop
+			case BinaryCountdown:
+				LEDS = ~(0xFF - step);   // 255 down to 0 on A7-A0 (active low)
+				step++;                  // 8-bit step wraps 255 -> 0, so the count repeats
+				break;
+		}
+	}
+ 2e8:	32 cf       	rjmp	.-412    	; 0x14e <main+0x86>
+
+000002ea <__vector_16>:
+
+// This is the required format of an ISR routine for a
+// Timer.  Your ISR code should go inside
+// (Prof Note:  When you define this correctly, the JUMP TABLE
+//  will be properly updated by the compiler.  (Thank you
+ISR(TIMER0_OVF_vect){
+ 2ea:	1f 92       	push	r1
+ 2ec:	0f 92       	push	r0
+ 2ee:	00 90 5f 00 	lds	r0, 0x005F	; 0x80005f <__TEXT_REGION_LENGTH__+0x7e005f>
+ 2f2:	0f 92       	push	r0
+ 2f4:	11 24       	eor	r1, r1
+ 2f6:	00 90 5b 00 	lds	r0, 0x005B	; 0x80005b <__TEXT_REGION_LENGTH__+0x7e005b>
+ 2fa:	0f 92       	push	r0
+ 2fc:	2f 93       	push	r18
+ 2fe:	8f 93       	push	r24
+ 300:	9f 93       	push	r25
+ 302:	ef 93       	push	r30
+ 304:	ff 93       	push	r31
+ 306:	cf 93       	push	r28
+ 308:	df 93       	push	r29
+ 30a:	cd b7       	in	r28, 0x3d	; 61
+ 30c:	de b7       	in	r29, 0x3e	; 62
+
+	TCNT0 = TCNT0_COUNT_SET;   // reload for next 1ms
+ 30e:	82 e5       	ldi	r24, 0x52	; 82
+ 310:	90 e0       	ldi	r25, 0x00	; 0
+ 312:	2e e8       	ldi	r18, 0x8E	; 142
+ 314:	fc 01       	movw	r30, r24
+ 316:	20 83       	st	Z, r18
+	Tick++;
+ 318:	80 91 01 01 	lds	r24, 0x0101	; 0x800101 <Tick>
+ 31c:	8f 5f       	subi	r24, 0xFF	; 255
+ 31e:	80 93 01 01 	sts	0x0101, r24	; 0x800101 <Tick>
+
+}
+ 322:	00 00       	nop
+ 324:	df 91       	pop	r29
+ 326:	cf 91       	pop	r28
+ 328:	ff 91       	pop	r31
+ 32a:	ef 91       	pop	r30
+ 32c:	9f 91       	pop	r25
+ 32e:	8f 91       	pop	r24
+ 330:	2f 91       	pop	r18
+ 332:	0f 90       	pop	r0
+ 334:	00 92 5b 00 	sts	0x005B, r0	; 0x80005b <__TEXT_REGION_LENGTH__+0x7e005b>
+ 338:	0f 90       	pop	r0
+ 33a:	00 92 5f 00 	sts	0x005F, r0	; 0x80005f <__TEXT_REGION_LENGTH__+0x7e005f>
+ 33e:	0f 90       	pop	r0
+ 340:	1f 90       	pop	r1
+ 342:	18 95       	reti
+
+00000344 <__vector_1>:
+
+// This is the required format of an ISR routine for a
+// Hardware Pin Interupt.  Format is "PIN#_vect" where
+// '#' is the number of the interupt...  PD0->0, PD1->1, etc
+ISR(INT0_vect){
+ 344:	1f 92       	push	r1
+ 346:	0f 92       	push	r0
+ 348:	00 90 5f 00 	lds	r0, 0x005F	; 0x80005f <__TEXT_REGION_LENGTH__+0x7e005f>
+ 34c:	0f 92       	push	r0
+ 34e:	11 24       	eor	r1, r1
+ 350:	8f 93       	push	r24
+ 352:	cf 93       	push	r28
+ 354:	df 93       	push	r29
+ 356:	cd b7       	in	r28, 0x3d	; 61
+ 358:	de b7       	in	r29, 0x3e	; 62
+
+	// button was released so go to the next pattern
+	if (Mode == BinaryCountdown){
+ 35a:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
+ 35e:	85 30       	cpi	r24, 0x05	; 5
+ 360:	19 f4       	brne	.+6      	; 0x368 <__vector_1+0x24>
+		Mode = BottomToTop;   // last pattern, so go back to the first
+ 362:	10 92 00 01 	sts	0x0100, r1	; 0x800100 <__DATA_REGION_ORIGIN__>
+ 366:	05 c0       	rjmp	.+10     	; 0x372 <__vector_1+0x2e>
+	}
+	else{
+		Mode++;
+ 368:	80 91 00 01 	lds	r24, 0x0100	; 0x800100 <__DATA_REGION_ORIGIN__>
+ 36c:	8f 5f       	subi	r24, 0xFF	; 255
+ 36e:	80 93 00 01 	sts	0x0100, r24	; 0x800100 <__DATA_REGION_ORIGIN__>
+	}
+	step = 0;   // restart the new pattern
+ 372:	10 92 02 01 	sts	0x0102, r1	; 0x800102 <step>
+
+ 376:	00 00       	nop
+ 378:	df 91       	pop	r29
+ 37a:	cf 91       	pop	r28
+ 37c:	8f 91       	pop	r24
+ 37e:	0f 90       	pop	r0
+ 380:	00 92 5f 00 	sts	0x005F, r0	; 0x80005f <__TEXT_REGION_LENGTH__+0x7e005f>
+ 384:	0f 90       	pop	r0
+ 386:	1f 90       	pop	r1
+ 388:	18 95       	reti
+
+0000038a <_exit>:
+ 38a:	f8 94       	cli
+
+0000038c <__stop_program>:
+ 38c:	ff cf       	rjmp	.-2      	; 0x38c <__stop_program>
